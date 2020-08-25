@@ -29,7 +29,7 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<double>("Price")
-                        .HasColumnType("decimal(18.2");
+                        .HasColumnType("decimal(18.2)");
 
                     b.Property<string>("ShortName")
                         .HasColumnType("TEXT");
@@ -81,7 +81,7 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<double>("Price")
-                        .HasColumnType("decimal(18.2");
+                        .HasColumnType("decimal(18.2)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");

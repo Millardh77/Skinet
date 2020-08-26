@@ -41,10 +41,10 @@ export class ProductDetailsComponent implements OnInit {
   loadProduct() {
     this.shopService.getProduct(+this.activatedRoute.snapshot.paramMap.get('id')).subscribe(product => {
       this.product = product;
-      this.bcService.set('@productDetails', product.name)
+      this.bcService.set('@productDetails', product.name);
     }, error => {
       console.log(error);
-    })
+    });
   }
 
 }

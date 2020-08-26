@@ -3,7 +3,7 @@ import { IProduct } from '../shared/models/product';
 import { ShopService } from './shop.service';
 import { IBrand } from '../shared/models/brand';
 import { IType } from '../shared/models/productType';
-import { ShopParams } from '../shared/models/shopParams'
+import { ShopParams } from '../shared/models/shopParams';
 
 @Component({
   selector: 'app-shop',
@@ -29,7 +29,6 @@ export class ShopComponent implements OnInit {
     this.getProducts();
     this.getBrands();
     this.getTypes();
-   
   }
 
   getProducts() {
@@ -80,7 +79,7 @@ export class ShopComponent implements OnInit {
   onPageChanged(event: any) {
     if (this.shopParams.pageNumber !== event) {
      this.shopParams.pageNumber = event;
-      this.getProducts();
+     this.getProducts();
     }
   }
 

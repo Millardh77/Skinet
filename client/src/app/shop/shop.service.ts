@@ -33,7 +33,7 @@ export class ShopService {
     params = params.append('sort', shopParams.sort);
     params = params.append('pageIndex', shopParams.pageNumber.toString());
     params = params.append('pageIndex', shopParams.pageSize.toString());
-   
+
     return this.http.get<IPagination>(this.baseUrl + 'products', {observe: 'response', params})
       .pipe(
         map(response => {
@@ -49,7 +49,7 @@ export class ShopService {
   getBrands() {
     return this.http.get<IBrand[]>(this.baseUrl + 'products/brands');
   }
-  
+
   getTypes() {
     return this.http.get<IType[]>(this.baseUrl + 'products/types');
   }

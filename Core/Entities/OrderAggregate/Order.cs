@@ -30,7 +30,7 @@ namespace Core.Entities.OrderAggregate
         public string PaymentIntentId { get; set; }
         public decimal GetTotal()
         {
-            return Subtotal + (decimal)DeliveryMethod.Price;
+            return Subtotal + DeliveryMethod.Price;
         }
     }
 }

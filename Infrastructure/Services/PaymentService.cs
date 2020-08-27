@@ -39,7 +39,7 @@ namespace Infrastructure.Services
             {
                 var deliverMethod = await _unitOfWork.Repository<DeliveryMethod>()
                      .GetByIdAsync((int)basket.DeliveryMethodId);
-                shippingPrice = (decimal)deliverMethod.Price;
+                shippingPrice = deliverMethod.Price;
             }
 
             foreach (var item in basket.Items)
